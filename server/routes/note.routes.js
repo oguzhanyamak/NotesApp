@@ -13,5 +13,7 @@ router.put('/:noteId', authenticateToken, noteController.editNote);
 router.delete('/:noteId', authenticateToken, noteController.deleteNote);
 // Notu pinle/pin kaldır
 router.patch('/:noteId/pin', authenticateToken, noteController.editNotePinned);
+// Notları ara
+router.get('/search', authenticateToken, noteController.searchNotes);
 
 module.exports = router; 
